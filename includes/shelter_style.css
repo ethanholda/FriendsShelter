@@ -1,0 +1,113 @@
+.bg {
+	background-color: #ECE5DB;
+}
+
+.white {
+	background-color: #FFFFFF;
+}
+.gray {
+	background-color: cccccc;
+
+}
+.date {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	line-height: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.calendar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.day {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #cccccc;
+}
+.month {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #cccccc;
+}
+.welcome {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ccff66;
+}
+.TopNav {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+.TopNav:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+.content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.homeText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	line-height: 14pt;
+}
+
+.warningText {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #cc0000;
+	line-height: 10pt;
+}
+
+A {
+	color:000000; text-decoration:underline;
+	}
+	
+A.home {
+	color:000000; text-decoration:none;
+	}
+	
+.profiletext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background: #cccccc;
+	border: 0;
+}
+
+.orange {
+	color:#FFff99;
+	text-decoration: none;
+	}
+	
+		
+.yellow {
+	color:#ccff66;
+	}
+	
+.blue {
+	color:#6699cc;
+	text-decoration: none;
+	}
+		
+.grey {
+	background-color:#C4BFBB;
+	}

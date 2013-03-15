@@ -1,0 +1,210 @@
+<?php
+/******************************************************************************
+* Constants needed for DB connectivity
+******************************************************************************/
+define('HOST','%(dbhost)s');
+define('DATABASE','%(dbname)s');
+define('USER','%(dbuser)s');
+define('PASSWORD','%(dbpassword)s');
+
+
+/******************************************************************************
+* Class        :  Mysql_db
+* Author       :  Greg Drudy
+* Date Written :  01/16/01
+******************************************************************************/
+
+class Mysql_db {
+
+
+/******************************************************************************
+* Member Variables
+******************************************************************************/
+	
+	var $host = HOST;
+	var $user = USER;
+	var $pwd = PASSWORD;
+	var $database = DATABASE;
+	var $linkId = 0;
+	var $queryId = 0;
+	var $result;
+
+/******************************************************************************
+* Function		: connect
+* Description 	: makes connection to database
+* Inputs      	:  none
+* Outputs     	:  none
+* Side Effects	:  none
+* Notes			:  connects to mysql database returning a resource id #, if there is an error it
+*                     will output the error along with error number to the browser
+******************************************************************************/
+	function connect() {
+		$this->linkId = mysql_connect($this->host,$this->user,$this->pwd);
+		if (!$this->linkId)
+			$this->_errorMessage('Could not connect to Database',mysql_errno(),mysql_error());
+		if	(!mysql_select_db($this->database,$this->linkId))
+			$this->_errorMessage('Could not select $this->database',mysql_errno(),mysql_error());
+		
+		return $this->linkId;
+	}
+
+/******************************************************************************
+* Function		: query
+* Description 	: initiates query on database 
+* Inputs      	:  query string
+* Outputs     	:  query id
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function query($queryString = "") {
+		//checks for existence of query string
+		if (!$queryString) {
+			$this->_errorMessage('No query string passed in');
+			return false;
+		}
+		
+		//if no linkId then it attempts to connect to db
+		if (!$this->linkId) {
+			$this->connect();
+		}
+			
+		//free previous query result if any
+		if ($this->queryId) {
+			$this->free();
+		}
+			
+		//performs query and returns query Id
+		$this->queryId = mysql_query($queryString, $this->linkId);
+		
+		if (!$this->queryId) {
+			$this->_errorMessage('Could not perform query',mysql_errno($this->linkId),mysql_error($this->linkId),$queryString);
+		} else {
+			return $this->queryId;
+		}
+	}
+
+/******************************************************************************
+* Function		: free
+* Description 	: frees result from previous query
+* Inputs      	:  none
+* Outputs     	:  none
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function free() {
+		@mysql_free_result($this->queryId);
+		$this->queryId = 0;
+	}
+	
+
+/******************************************************************************
+* Function		: next_record()
+* Description 	: returns next result row from database query
+* Inputs      	:  none
+* Outputs     	:  array of results
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function next_record() {
+                //test for query Id, fail if no Id
+		if (!$this->queryId) {
+			$this->_errorMessage('No proper query Id');
+			return false;
+		}
+
+                //edit eholda 2010-09-23
+                //php5 bug fix
+                //removed the MYSQL_ASSOC second argument
+		//ORIGINAL COMMENT : execute fetch_object with result type of Assoc so we don't get redundant data
+		$this->result = @mysql_fetch_object($this->queryId);
+		
+		return $this->result;
+	}
+	
+
+/******************************************************************************
+* Function		: num_rows()
+* Description 	: returns number of rows in query
+* Inputs      	:  none
+* Outputs     	:  none
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function num_rows() {
+		return @mysql_num_rows($this->queryId);
+	}
+	
+
+/******************************************************************************
+* Function		: affected_rows()
+* Description 	: returns nmber of rows affected by a query
+* Inputs      	:  none
+* Outputs     	:  none
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function affected_rows(){
+		return @mysql_affected_rows($this->linkId);
+	}
+	
+
+
+/******************************************************************************
+* Function		: num_fields
+* Description 	: returns number of fields for a particular query
+* Inputs      	:  queryId
+* Outputs     	:  number of fields
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function num_fields() {
+		return @mysql_num_fields($this->queryId);
+	}
+	
+/******************************************************************************
+* Function		: insert_id
+* Description 	: returns last generated id from an insert query
+* Inputs      	:  none
+* Outputs     	:  link id
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function insert_id() {
+		return @mysql_insert_id($this->linkId);
+	}
+	
+	
+/******************************************************************************
+* Function		: seek
+* Description 	: goes to specified returned row in query
+* Inputs      	:  none
+* Outputs     	:  none
+* Side Effects	:  none
+* Notes			:  
+******************************************************************************/
+	function seek($pos) {
+		return @mysql_data_seek($this->linkId,$pos);
+	}
+	
+
+
+/******************************************************************************
+* Function		: errorMessage
+* Description 	: none
+* Inputs      	:  msg, mysql error #, mysql error message
+* Outputs     	:  nicely formatted error message
+* Side Effects	:  none
+* Notes			:  this displays the error message to the browser
+******************************************************************************/
+	function _errorMessage($msg, $errorNum = "", $errorMsg = "",$query = "") {
+		print "<b>".$msg."</b>:<br>";
+		if ($errorNum && $errorMsg) {
+			print "Error #".$errorNum." => ".$errorMsg."<br>";
+		}
+		if ($query) {
+			print "Query => ".$query;
+		}
+	}
+
+}
+?>

@@ -1,0 +1,626 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>The Friends Shelter | Calendar</title>
+<link href="shelter_style.css" rel="stylesheet" type="text/css">
+<script language="javascript">
+<!--
+<!--
+//rollover script
+
+if (document.images) {
+
+	var next = new Image(); next.src = "images/next.gif";
+	var nextroll = new Image(); nextroll.src = "images/next_.gif";
+	
+	var last = new Image(); last.src = "images/last.gif";
+	var lastroll = new Image(); lastroll.src = "images/last_.gif";
+}
+
+function turnOn(imgName) {
+	if (document.images) document[imgName].src =
+	eval(imgName + 'roll' + '.src');
+}
+
+function turnOff(imgName) {
+	if (document.images) document[imgName].src =
+	eval(imgName + '.src');
+}
+// -->
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+</head>
+
+<body background="images/bg_calendar.gif" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+&nbsp;<br>
+<table width="722" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td><img src="images/clear.gif" width="16" height="8"></td>	
+    <td><a href="index.html"><img src="images/logo.gif" width="142" height="16" border="0" alt="The Friends Shelter Homepage."></a></td>
+		<td align="right">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td><a href="calendar.html" class="TopNav">CALENDAR</a></td>
+					<td><img src="images/orange.gif" width="1" height="14" hspace="6"></td>
+					
+          <td><a href="feedback.html" class="TopNav">FEEDBACK</a></td>
+					<td><img src="images/orange.gif" width="1" height="14" hspace="6"></td>
+					
+          <td><a href="handbook.html" class="TopNav">HANDBOOK</a></td>
+					<td><img src="images/orange.gif" width="1" height="14" hspace="6"></td>
+					
+          <td><a href="volunteer_list.html" class="TopNav">VOLUNTEER LIST</a></td>
+					<td><img src="images/orange.gif" width="1" height="14" hspace="6"></td>
+					<td><a href="profile.html" class="TopNav">CHANGE MY INFO</a></td>
+					<td><img src="images/orange.gif" width="1" height="14" hspace="6"></td>
+					
+					<td><a href="index.html" class="TopNav">HOME</a></td>
+					<td><img src="images/clear.gif" width="16" height="8"></td>
+					</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<table width="722" border="1" cellspacing="0" cellpadding="0">
+  <!-- gray row -->
+  <!-- Month -->
+  <tr> 
+    <td colspan="17"><img src="images/clear.gif" width="1" height="11"></td>
+  </tr>
+  <tr> 
+    <td colspan="2">&nbsp;</td>
+    <td colspan="9">
+	<table cellpadding="0" cellspacing="0" border="0" width="400">
+		<tr> 
+          <td><img src="images/clear.gif" width="17" height="1"></td>
+          <td><img src="images/clear.gif" width="150" height="1"></td>
+          <td><img src="images/clear.gif" width="17" height="1"></td>
+          <td><img src="images/clear.gif" width="216" height="1"></td>
+        </tr>
+        <tr> 
+          <td align="right"><img src="images/ltab.gif" width="17" height="26"></td>
+          <td class="month" align="center">December 2003</td>
+          <td><img src="images/rtab.gif" width="17" height="26"></td>
+          <td class="welcome">&nbsp;Welcome, John Smith </td>
+        </tr>
+      </table></td>
+    <td valign="top"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="right"><a href="#last" class="TopNav">&nbsp;&lt; Last Month&nbsp;</a></td>
+	<td><img src="images/orange.gif" width="1" height="14" vspace="2"></td>
+	<td><a href="#next" class="TopNav">&nbsp;Next Month &gt;&nbsp;</a></td>
+	<td colspan="2"><img src="images/clear.gif" width="1" height="1"></td>
+  </tr>
+  <!-- first week -->
+  <tr> 
+    <td class="day">&nbsp;</td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">SUNDAY</td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">MONDAY</td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">TUESDAY</td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">WEDNESDAY</td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">THURSDAY</td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">FRIDAY</td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td align="center" class="day">SATURDAY</td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+  </tr>
+  <!-- spacer -->
+  <tr> 
+    <td class="gray"><img src="images/clear.gif" width="15" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="98" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray"><img src="images/clear.gif" width="15" height="1"></td>
+  </tr>
+  <tr> 
+    <td rowspan="2" class="white">&nbsp;</td>
+    <td rowspan="2" class="white">&nbsp;</td>
+    <!-- Sunday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Monday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Tuesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Wednesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>1</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Thursday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>2</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones<br> </td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Friday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>3</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Saturday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>4</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+  </tr>
+  <!-- Button Row -->
+  <tr> 
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('condition.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('condition.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+  </tr>
+  <!-- gray row -->
+  <tr> 
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray" colspan="13"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+  </tr>
+  <!-- second week -->
+  <tr> 
+    <td rowspan="2" class="white">&nbsp;</td>
+    <td rowspan="2" class="white">&nbsp;</td>
+    <!-- Sunday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>5</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Monday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>6</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones<br>
+            Bill Lee</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Tuesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>7</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Wednesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>8</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top"><p>Mary Jones<br>
+              Bill Lee</p></td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Thursday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>9</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Bill Lee<br>
+            Mary Jones<br> </td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Friday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>10</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Bill Lee<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Saturday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>11</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Bill Lee<br> </td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+  </tr>
+  <!-- Button Row -->
+  <tr> 
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+  </tr>
+  <!-- gray row -->
+  <tr> 
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray" colspan="13"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+  </tr>
+  <!-- third week -->
+  <tr> 
+    <td rowspan="2" class="white">&nbsp;</td>
+    <td rowspan="2" class="white">&nbsp;</td>
+    <!-- Sunday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>12</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Monday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>13</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Tuesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>14</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Wednesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>15</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Thursday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>16</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Friday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>17</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Bill Lee<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Saturday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>18</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+  </tr>
+  <!-- Button Row -->
+  <tr> 
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('condition.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+  </tr>
+  <!-- gray row -->
+  <tr> 
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray" colspan="13"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+  </tr>
+  <!-- fourth week -->
+  <tr> 
+    <td rowspan="2" class="white">&nbsp;</td>
+    <td rowspan="2" class="white">&nbsp;</td>
+    <!-- Sunday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>19</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Monday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>20</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Tuesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>21</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Wednesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>22</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Thursday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>23</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones<br> </td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Friday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>24</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Saturday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>25</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+  </tr>
+  <!-- Button Row -->
+  <tr> 
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+  </tr>
+  <!-- gray row -->
+  <tr> 
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="gray" colspan="13"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <td class="white"><img src="images/clear.gif" width="1" height="1"></td>
+  </tr>
+  <!-- fifth week -->
+  <tr> 
+    <td rowspan="2" class="white">&nbsp;</td>
+    <td rowspan="2" class="white"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Sunday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>26</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">John Smith<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="90"></td>
+    <!-- Monday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>27</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Tuesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>28</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Wednesday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>29</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Thursday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>30</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Bill Lee<br>
+            Mary Jones<br> </td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Friday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar"><strong>31</strong></td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">Bill Lee<br>
+            Mary Jones</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="gray"><img src="images/clear.gif" width="1" height="1"></td>
+    <!-- Saturday -->
+    <td align="center" valign="top" class="calendar"> <table width="90">
+        <tr> 
+          <td valign="top" class="calendar">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td class="calendar" valign="top">&nbsp;</td>
+        </tr>
+      </table></td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+    <td rowspan="2" valign="top" class="white">&nbsp;</td>
+  </tr>
+  <!-- Button Row -->
+  <tr> 
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('delete.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/delete.gif" width="88" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar">&nbsp;</td>
+    <td align="center" class="calendar"><a href="#" onClick="MM_openBrWindow('add.html','add','scrollbars=no,resizable=yes,width=400,height=400')"><img src="images/add.gif" width="82" height="15" border="0"></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+
+
+
+</body>
+</html>
