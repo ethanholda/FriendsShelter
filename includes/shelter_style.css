@@ -124,6 +124,10 @@ div.donate {
     padding:10;
 }
 
+td div.donate.sendthemameal {
+   height:55px; 
+}
+
 td div.donate {
     height: 100px;
 }
