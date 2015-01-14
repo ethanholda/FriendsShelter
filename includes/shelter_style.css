@@ -111,3 +111,41 @@ A.home {
 .grey {
 	background-color:#C4BFBB;
 	}
+	
+/* donate areas */
+div.donate {
+    background-color: #efa;
+    border: solid 1px #000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    clear:both;
+    margin:0 10 0 10;
+    padding:10;
+}
+
+td div.donate {
+    height: 100px;
+}
+
+div.donate_intro {
+    margin-bottom:10px;
+}
+
+div.donate div.center {
+    margin-left:auto;
+    margin-right:auto;
+    width:65%;
+}
+
+div.donate_intro hr {
+    border:none;
+    height:1px;
+    color:#000;
+    background-color:#000;
+}
+
+h4.donate {
+    padding-left:10px;
+    margin-bottom:0px;
+}
