@@ -1,5 +1,7 @@
 <?
 include("../includes/DB.inc");
+include("../includes/password.inc");
+
 $dbh=new DB;
 
 $sql="select * from users where email != 'setup' order by last_name";

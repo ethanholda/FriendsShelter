@@ -23,4 +23,11 @@ function getUserData(&$db,$user_id) {
 		return 0;
 	}
 }
+
+// mimics register globals for php 5.4+
+// (not a great idea, but...)
+foreach (array_merge($_GET, $_POST, $_COOKIE) as $key => $val) {
+  global $$key;
+  $$key = addslashes($val);
+}
 ?>

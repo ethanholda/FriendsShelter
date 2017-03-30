@@ -1,5 +1,6 @@
 <?
 include("includes/DB.inc");
+include("../includes/password.inc");
 
 $dbh=new DB;
 
