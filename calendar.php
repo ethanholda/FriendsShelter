@@ -6,6 +6,8 @@ $dbh=new DB;
 
 $user_id=checkPassword($dbh,$email_cookie,$password_cookie);
 //$today_unix=date();
+date_default_timezone_set('America/New_York');
+
 $today=date("Y-m-d");
 $today_u=mktime(0, 0, 0);
 $cutoff_day_u=$today_u+259200; 
