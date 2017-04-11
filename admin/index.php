@@ -24,7 +24,7 @@ if ($unsigned_date_in) {
 	
 	$c=0;
 	for ($i=0;$i<count($data_temp)-1;$i++) {
-		$sql="select * from volunteer_calendar where month(calendar_date)=$this_month and year(calendar_date)=$this_year and user_id=".$data_temp[$i]->user_id;
+		$sql="select * from volunteer_calendar2 where month(calendar_date)=$this_month and year(calendar_date)=$this_year and user_id=".$data_temp[$i]->user_id;
 		$result=$dbh->query($sql);
 		
 		if ($dbh->num_rows()==0) {
@@ -139,7 +139,7 @@ if ($inactive) {
 		if (($i%2)==0) $td_bgcolor="ffffff";
 		else $td_bgcolor="cccccc";
 	
-		$sql="select calendar_date from volunteer_calendar where user_id=".$data_volunteers[$i]->user_id." order by calendar_date desc limit 3";
+		$sql="select calendar_date from volunteer_calendar2 where user_id=".$data_volunteers[$i]->user_id." order by calendar_date desc limit 3";
 		$result=$dbh->query($sql);
 		
 		$dates="";

@@ -23,15 +23,15 @@ if ($user_id) {
 	$user_name=$data_user->first_name." ".$data_user->last_name;
 
 	if ($delete_date&&$delete_date>$today) {
-		$sql="delete from volunteer_calendar where user_id=$user_id and calendar_date='$delete_date'";
+		$sql="delete from volunteer_calendar2 where user_id=$user_id and calendar_date='$delete_date'";
 		$result=$dbh->query($sql);
 	}
 	if ($add_date&&$add_date>$today) {
-		$sql="select * from volunteer_calendar where user_id=".$user_id." and calendar_date='".$add_date."'";
+		$sql="select * from volunteer_calendar2 where user_id=".$user_id." and calendar_date='".$add_date."'";
 		$result=$dbh->query($sql);
 		
 		if ($dbh->num_rows()==0) {		
-			$sql="insert into volunteer_calendar (user_id, calendar_date) values ($user_id, '$add_date')";
+			$sql="insert into volunteer_calendar2 (user_id, calendar_date) values ($user_id, '$add_date')";
 			$result=$dbh->query($sql);
 		}
 	}
@@ -202,7 +202,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 		echo "<td class=\"calendar\" valign=\"top\">";		
 		
 		//is user signed up for given day
-		$sql="select u.user_id, u.first_name, u.last_name from users u, volunteer_calendar v where u.user_id=v.user_id and v.calendar_date='$this_today' order by last_name";
+		$sql="select u.user_id, u.first_name, u.last_name from users u, volunteer_calendar2 v where u.user_id=v.user_id and v.calendar_date='$this_today' order by last_name";
 		$result=$dbh->query($sql);
 		
 		unset($me);
